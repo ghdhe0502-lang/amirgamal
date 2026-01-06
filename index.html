@@ -138,34 +138,46 @@
             border: 1px solid var(--border);
         }
 
-        /* تنسيق بيانات المصمم في الأسفل على اليمين */
+        /* تنسيق بيانات المصمم المعدل */
         .designer-info {
             position: fixed;
             bottom: 15px;
             right: 15px;
             background: var(--bg-card);
             border: 1px solid var(--border);
-            padding: 8px 12px;
-            border-radius: 10px;
-            font-size: 11px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            color: var(--text-sub);
+            padding: 10px 15px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             text-decoration: none;
             display: flex;
             flex-direction: column;
-            align-items: flex-end;
-            transition: 0.3s;
+            gap: 2px;
             z-index: 1000;
+            transition: 0.3s;
         }
 
         .designer-info:hover {
-            transform: translateY(-3px);
+            transform: translateY(-5px);
             border-color: var(--whatsapp);
         }
 
-        .designer-info span {
+        .designer-label {
+            font-size: 10px;
+            color: var(--text-sub);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .designer-name {
+            font-size: 14px;
             font-weight: bold;
             color: var(--text-main);
+        }
+
+        .designer-phone {
+            font-size: 12px;
+            color: var(--whatsapp);
+            direction: ltr;
         }
     </style>
 </head>
@@ -197,14 +209,15 @@
     </div>
 
     <div class="map-frame">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14300.000000000000!2d31.5000000!3d26.7666667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1450000000000000%3A0x0!2zVGFodGE!5e0!3m2!1sen!2seg!4v1700000000000" 
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14304.38139572627!2d31.50346085!3d26.75610815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145009a63318f77d%3A0x6786c2317189c438!2sTahta%2C%20Sohag%20Governorate!5e0!3m2!1sen!2seg!4v1700000000000" 
                 width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
 </div>
 
 <a href="https://wa.me/201101200723" target="_blank" class="designer-info">
-    <div>تصميم بواسطة</div>
-    <span>أمير جمال | 01101200723</span>
+    <span class="designer-label">صمم بواسطة</span>
+    <span class="designer-name">أمير بن جمال</span>
+    <span class="designer-phone">+20 01101200723</span>
 </a>
 
 <script>
