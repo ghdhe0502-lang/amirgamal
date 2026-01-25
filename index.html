@@ -51,10 +51,9 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.08);
             text-align: center;
             border: 1px solid var(--border);
-            position: relative; /* ضروري لتموضع زر الثيم */
+            position: relative;
         }
 
-        /* زر الثيم مثل الكود الأول */
         .theme-toggle-inline {
             position: absolute;
             top: 25px;
@@ -139,11 +138,10 @@
             margin-top: 20px;
             border-radius: 12px;
             overflow: hidden;
-            height: 120px;
+            height: 150px;
             border: 1px solid var(--border);
         }
 
-        /* تنسيق الفوتر مثل الكود الأول */
         .designer-footer-row {
             margin-top: 15px;
             padding-top: 10px;
@@ -182,7 +180,7 @@
     
     <div class="info">
         <h2>أمير جمال</h2>
-        <p>📍 طهطا، سوهاج</p>
+        <p>📍 مدينة طهطا، سوهاج</p>
         <p dir="ltr">📞 01101200723</p>
     </div>
 
@@ -199,7 +197,10 @@
     </div>
 
     <div class="map-frame">
-        <iframe src="about:blank" width="100%" height="100%" style="border:0;"></iframe>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14304.53424160451!2d31.500588649999998!3d26.75628525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1450629a8a642861%3A0xc0289045888e2c0e!2z2LfZh9i32KfYjCDZhdix2YPYsiDYt9mH2LfZp9iMINiz2YjZh9in2K0!5e0!3m2!1sar!2seg!4v1700000000000!5m2!1sar!2seg" 
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
     </div>
 
     <div class="designer-footer-row">
@@ -228,7 +229,7 @@
     }
 
     function saveContact() {
-        const vcard = "BEGIN:VCARD\nVERSION:3.0\nFN:أمير جمال\nTEL:01101200723\nEND:VCARD";
+        const vcard = "BEGIN:VCARD\nVERSION:3.0\nFN:أمير جمال\nTEL:01101200723\nADR:;;Tahata City;;;;\nEND:VCARD";
         const blob = new Blob([vcard], { type: "text/vcard" });
         const url = window.URL.createObjectURL(blob);
         const a = document.createElement("a");
